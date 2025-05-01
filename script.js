@@ -1,69 +1,33 @@
-body {
-  direction: rtl;
-  font-family: sans-serif;
-  background-color: #f5f5f5;
-  margin: 0;
-  padding: 0;
+function showPage(pageId) {
+  const pages = ["login-page", "books-page", "cart-page", "confirmation-page"];
+  pages.forEach(id => {
+    const page = document.getElementById(id);
+    if (page) {
+      page.style.display = (id === pageId) ? "block" : "none";
+    }
+  });
 }
 
-/* تسجيل الدخول */
-#login-page {
-  width: 300px;
-  margin: 80px auto;
-  padding: 30px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+function goToBooks() {
+ 
+  showPage("books-page");
 }
 
-/* عرض الكتب */
-#books-page, #cart-page, #confirmation-page {
-  padding: 40px;
+function goToCart() {
+  showPage("cart-page");
 }
 
-input, select, button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  font-size: 14px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+
+function confirmOrder() {
+  showPage("confirmation-page");
 }
 
-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
+
+function backToBooks() {
+  showPage("books-page");
 }
 
-/* تنسيق عرض الكتب */
-.book-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.book-card {
-  background: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-}
-
-.book-card h3 {
-  margin: 10px 0 5px;
-}
-
-.cart-item {
-  background: #fff;
-  padding: 15px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-}
-
-#confirmation-page h2 {
-  color: green;
+function backToHome() {
+  showPage("login-page");
 }
