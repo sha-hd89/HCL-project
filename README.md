@@ -11,4 +11,4 @@ This final implementation of the Human-Computer Interaction project contains fil
 - JavaScript (Vanilla)
 
 ## Link to Live Version:
-https://username.github.io/hci-library-project/
+https://github.com/sha-hd89/HCL-project
