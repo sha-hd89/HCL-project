@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>مكتبة التبرع بالكتب</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="login-page">
+    <h2>تسجيل الدخول</h2>
+    <input type="text" placeholder="الاسم الكامل" id="name">
+    <input type="text" placeholder="الرقم الجامعي" id="student-id">
+    <select id="year">
+      <option>السنة الدراسية</option>
+      <option>الأولى</option>
+      <option>الثانية</option>
+      <option>الثالثة</option>
+      <option>الرابعة</option>
+    </select>
+    <select id="major">
+      <option>التخصص</option>
+      <option>علوم الحاسب</option>
+      <option>هندسة</option>
+      <option>إدارة أعمال</option>
+    </select>
+    <button onclick="goToBooks()">تسجيل الدخول</button>
+  </div>
+
+  <div id="books-page" style="display: none;">
+    <h2>عرض الكتب المتاحة</h2>
+    <button onclick="goToCart()">عرض السلة</button>
+  </div>
+
+  <div id="cart-page" style="display: none;">
+    <h2>سلة الكتب</h2>
+    <button onclick="confirmOrder()">تأكيد الطلب</button>
+  </div>
+
+  <div id="confirmation-page" style="display: none;">
+    <h2>تم تأكيد الطلب بنجاح ✅</h2>
+    <button onclick="backToHome()">العودة إلى الصفحة الرئيسية</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
